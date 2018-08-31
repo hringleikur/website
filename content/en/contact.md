@@ -1,5 +1,6 @@
 +++
-title = "Contact"
+title = "Contact Us"
 +++
-
-Form and stuff in English
+* sirkus@sirkus.is
+* Hringleikur sirkuslistafélag
+* 620518-2980

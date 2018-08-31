@@ -1,9 +1,6 @@
 +++
 title = "Hafðu samband"
-phone = ""
-email = ""
-instagram = ""
-facebook = ""
 +++
-
-Contact and stuff in Icelandic
+* sirkus@sirkus.is
+* Hringleikur sirkuslistafélag
+* 620518-2980

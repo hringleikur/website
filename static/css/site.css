@@ -605,6 +605,12 @@ footer {
   margin-top:5rem;
 }
 
+footer .title
+{
+  font-size:5rem;
+  color:rgba(255,255,255,0.3)
+}
+
 *[id]:before {
   display: block;
   content: " ";

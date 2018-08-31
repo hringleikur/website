@@ -1,21 +1,7 @@
-baseURL = "http://hringleikur.is/"
+baseURL = "/"
 defaultContentLanguage = "is"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 config = "config.toml"
-
-[params]
-    tagline = "Osprey Example Site"
-    author = "Toma Nistor"
-    description = "Full-stack web developer and UI/UX enthusiast based in San Diego, CA."
-    logoBig = "/images/osprey-logo.png"
-    logoSmall = "/images/osprey-logo.png"
-    favicon = "favicon.ico"
-    opengraphImage = "/images/osprey.png"
-    twitter = "TomaNistor"
-    instagram = "TomaNistor"
-    facebook = ""
-    email = ""
-    googleTagManager = ""
 
 [languages]
   [languages.en]
@@ -32,10 +18,6 @@ config = "config.toml"
       url    = "/en/#about"
       name   = "About"
       weight = 2
-    [[languages.en.menu.main]]
-      url    = "/en/#showcase"
-      name   = "Showcase"
-      weight = 3
     [[languages.en.menu.main]]
       url    = "/en/#contact"
       name   = "Contact"
@@ -55,10 +37,6 @@ config = "config.toml"
       url    = "/#about"
       name   = "Um Okkur"
       weight = 2
-    [[languages.is.menu.main]]
-      url    = "/#showcase"
-      name   = "Showcase"
-      weight = 3
     [[languages.is.menu.main]]
       url    = "/#contact"
       name   = "Hafa Samband"
