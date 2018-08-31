@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: master
+publish_mode: editorial_workflow
+media_folder: "static/img/uploaded"
+public_folder: "/img/uploaded"
+collections:
+  - label: "Icelandic Pages"
+    name: "is-pages"
+    files:
+      - label: "Um okkur"
+        name: "umokkur"
+        file: "content/is/about.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Hafa samband"
+        name: "hafasamband"
+        file: "content/is/contact.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+  - label: "English Pages"
+    name: "en-pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/en/about.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Contact"
+        name: "contact"
+        file: "content/en/contact.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
