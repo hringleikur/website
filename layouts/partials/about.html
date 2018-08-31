@@ -1,0 +1,7 @@
+
+<section class="about container" id="about">
+  <h2>{{ with $.Site.GetPage "page" "about.md" }}{{ .Title }}{{ end }}</h2>
+  {{ with $.Site.GetPage "page" "about.md" }}
+    {{ .Content }}
+  {{ end }}
+</section>

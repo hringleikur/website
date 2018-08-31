@@ -1,0 +1,65 @@
+baseURL = "http://hringleikur.is/"
+defaultContentLanguage = "is"
+disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
+config = "config.toml"
+
+[params]
+    tagline = "Osprey Example Site"
+    author = "Toma Nistor"
+    description = "Full-stack web developer and UI/UX enthusiast based in San Diego, CA."
+    logoBig = "/images/osprey-logo.png"
+    logoSmall = "/images/osprey-logo.png"
+    favicon = "favicon.ico"
+    opengraphImage = "/images/osprey.png"
+    twitter = "TomaNistor"
+    instagram = "TomaNistor"
+    facebook = ""
+    email = ""
+    googleTagManager = ""
+
+[languages]
+  [languages.en]
+    title = "Hringleikur"
+    contentDir = "content/en"
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 2
+    [[languages.en.menu.main]]
+      url    = "/en/#"
+      name   = "Home"
+      weight = 1
+    [[languages.en.menu.main]]
+      url    = "/en/#about"
+      name   = "About"
+      weight = 2
+    [[languages.en.menu.main]]
+      url    = "/en/#showcase"
+      name   = "Showcase"
+      weight = 3
+    [[languages.en.menu.main]]
+      url    = "/en/#contact"
+      name   = "Contact"
+      weight = 4
+
+  [languages.is]
+    title = "Hringleikur"
+    contentDir = "content/is"
+    languageName = "íslensk"
+    languageCode = "is"
+    weight = 1
+    [[languages.is.menu.main]]
+      url    = "/#"
+      name   = "Heima"
+      weight = 1
+    [[languages.is.menu.main]]
+      url    = "/#about"
+      name   = "Um Okkur"
+      weight = 2
+    [[languages.is.menu.main]]
+      url    = "/#showcase"
+      name   = "Showcase"
+      weight = 3
+    [[languages.is.menu.main]]
+      url    = "/#contact"
+      name   = "Hafa Samband"
+      weight = 4

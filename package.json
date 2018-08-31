@@ -1,0 +1,14 @@
+{
+  "name": "hringleikur",
+  "version": "1.0.0",
+  "description": "Hringleikur Website on Hugo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "stickybits": "^3.5.1"
+  }
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+
+  <title>
+    {{ if .IsHome }}
+        {{ .Site.Title }}
+    {{ else if .Params.heading }}
+        {{ .Params.heading }}
+    {{ else }}
+        {{ .Title }} | {{ .Site.Title }}
+    {{ end }}
+  </title>
+
+  {{ if .IsTranslated }}
+    {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+    {{ end }}
+  {{ end }}
+
+  <link rel="stylesheet" href="/css/site.css">
+
+
+</head>
+
+<body class="{{ if .IsHome }}homepage{{ end }}">
+
+  <header id="site-header">
+    <h1>{{.Site.Title}}</h1>
+  </header>
+
+  <nav class="nav">
+    {{ range .Site.Menus.main }}
+      <a class="nav-item" href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+
+    {{ if .IsTranslated }}
+        {{ range .Translations }}
+            <a class="nav-language" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        {{ end}}
+    {{ end }}
+  </nav>
+
+  {{ block "main" . }}{{ end }}
+
+  {{ partial "footer.html" . }}
+
+  <script>
+    var num = Math.floor((Math.random() * 7) + 1);
+    document.getElementById("site-header").style.backgroundImage="url(../img/header"+num+".jpg)";
+  </script>
+</body>
+</html>

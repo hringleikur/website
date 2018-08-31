@@ -1,0 +1,14 @@
+<footer id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {{ with $.Site.GetPage "page" "contact.md" }}{{ .Title }}{{ end }}
+      </div>
+      <div class="col">
+        {{ with $.Site.GetPage "page" "contact.md" }}
+          {{ .Content }}
+        {{ end }}
+      </div>
+  </div>
+</div>
+</footer>

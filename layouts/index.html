@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <main aria-role="main" >
+
+      <section class="homepage-content container"> {{.Content}}</section>
+
+      {{ partial "about.html" . }}
+
+    </main>
+{{ end }}
