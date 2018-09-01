@@ -31,16 +31,18 @@
     <h1>{{.Site.Title}}</h1>
   </header>
 
-  <nav class="nav">
-    {{ range .Site.Menus.main }}
-      <a class="nav-item" href="{{ .URL }}">{{ .Name }}</a>
-    {{ end }}
+  <nav id="main-navigation">
+    <div class="inner">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
 
-    {{ if .IsTranslated }}
-        {{ range .Translations }}
-            <a class="nav-language" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-        {{ end}}
-    {{ end }}
+      {{ if .IsTranslated }}
+          {{ range .Translations }}
+              <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+          {{ end}}
+      {{ end }}
+    </div>
   </nav>
 
   {{ block "main" . }}{{ end }}
@@ -48,10 +50,32 @@
   {{ partial "footer.html" . }}
 
   <script>
-    var num = Math.floor((Math.random() * 7) + 1);
-    document.getElementById("site-header").style.backgroundImage="url(../img/header"+num+".jpg)";
-  </script>
-  <script>
+
+  var menu = document.getElementById('main-navigation');
+  var istop = false;
+  window.addEventListener('scroll', function(e) {
+    if(menu.offsetTop-5<=window.scrollY){
+      if(!istop)
+      {
+        menu.className = "stuck";
+        istop = true;
+      }
+    }
+    else
+    {
+      if(istop)
+      {
+        menu.className = "";
+        istop = false;
+      }
+    }
+  });
+
+  // Randomize header image
+  var num = Math.floor((Math.random() * 7) + 1);
+  document.getElementById("site-header").style.backgroundImage="url(../img/header"+num+".jpg)";
+
+  // Handle Netlify login
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {

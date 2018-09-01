@@ -12,7 +12,7 @@ config = "config.toml"
     weight = 2
     [[languages.en.menu.main]]
       url    = "/en/#"
-      name   = "Home"
+      name   = "Hringleikur"
       weight = 1
     [[languages.en.menu.main]]
       url    = "/en/#about"
@@ -31,7 +31,7 @@ config = "config.toml"
     weight = 1
     [[languages.is.menu.main]]
       url    = "/#"
-      name   = "Heima"
+      name   = "Hringleikur"
       weight = 1
     [[languages.is.menu.main]]
       url    = "/#about"
