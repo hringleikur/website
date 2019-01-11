@@ -1,0 +1,152 @@
+<!doctype html>
+
+<html lang="is">
+<head>
+	<meta name="generator" content="Hugo 0.47" />
+  <meta charset="utf-8">
+
+  <title>
+    
+        Hringleikur
+    
+  </title>
+
+  
+    
+    <link rel="alternate" hreflang="is" href="/" title="íslensk">
+    
+    <link rel="alternate" hreflang="en" href="/en/" title="English">
+    
+  
+
+  <link rel="stylesheet" href="/css/site.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+</head>
+
+<body class="homepage">
+
+  <header id="site-header">
+    <h1>Hringleikur</h1>
+  </header>
+
+  <nav id="main-navigation">
+    <div class="inner">
+      
+        <a href="/">Hringleikur</a>
+      
+        <a href="/#about">Um Okkur</a>
+      
+        <a href="/#contact">Hafa Samband</a>
+      
+
+      
+          
+              <a href="/en/">English</a>
+          
+      
+    </div>
+  </nav>
+
+  
+    <main aria-role="main" >
+
+      <section class="homepage-content container"> </section>
+
+      
+<section class="about container" id="about">
+  <h2>Um okkur</h2>
+  
+    
+
+<p>Hringleikur er nýtt íslenskt sirkuslistafélag sem hyggst efla íslenska sirkusmenningu. Meðlimir félagsins stunda allir sirkuslistir og starfa við þær í einhverjum mæli. Hringleikur stendur að framleiðslu sirkussýninga á Íslandi, og auk þess rekur hann sirkusstarfsemi fyrir börn og unglinga: Æskusirkusinn.</p>
+
+<p>Meðlimir Hringleiks koma úr ýmsum áttum, en hafa það allir sameiginlegt að vilja stunda sirkuslistir og byggja upp fjölbreytta sirkusmenningu hérlendis. Sirkusfólkið í Hringleik hefur meðal annars bakgrunn úr fimleikum, leiklist og dansi, og einhverjir hafa numið sirkuslistir í sirkusskólum erlendis, s.s. í Codarts listaháskólanum í Rotterdam og AFUK í Kaupmannahöfn. Auk þess hefur hópurinn starfað saman til margra ára undir merkjum Sirkus Íslands.</p>
+
+<h2 id="stjórn-hringleiks-sirkuslistafélags">Stjórn Hringleiks - sirkuslistafélags</h2>
+
+<ul>
+<li>Formaður - Eyrún Ævarsdóttir</li>
+<li>Varaformaður - Nick Candy</li>
+<li>Gjaldkeri - Axel Diego</li>
+<li>Ritari - Bryndís Torfadóttir</li>
+<li>Kennslustjóri - Daníel Hauksson</li>
+<li>Meðstjórnandi - Harpa Lind Ingadóttir</li>
+<li>Meðstjórnandi - Jóakim Meyvant Kvaran</li>
+<li>Varamaður - Thomas Burke</li>
+<li>Varamaður - Kristinn Karlsson</li>
+</ul>
+
+<h2 id="stofnað">Stofnað</h2>
+
+<p>Hringleikur - sirkuslistafélag var stofnað með það að leiðarljósi að búa til aðstæður fyrir sirkuslistafólk til að útbúa fjölbreytta og vandaða sirkuslist og gera sirkus að stærri og sjáanlegri hluta af menningarflórunni á Íslandi. Meginmarkmið félagsins er að styðja við vöxt sirkuslistar á Íslandi, og gerir það með því að standa að fjölbreyttum sirkussýningum og viðburðum, auk sirkusstarfs fyrir ungmenni þar sem fleiri læra að stunda og njóta sirkuslistar. Hringleikur vill gjarnan vera í samstarfi við aðila innan sirkus- og sviðslistasenunnar bæði innanlands og utan.</p>
+
+<p>Hringleikur vonast til að í framtíðinni verði á Íslandi fjölbreytt sirkussena, sem hefur upp á að bjóða vandaðar sirkussýningar ætlaðar breiðum áhorfendahópi, bæði samtíma-sirkus og með klassískum brag, öflugt ungmennastarf sem eflir þátttöku og áhuga á sirkus í landinu, og að til staðar verði hentugt húsnæði sem áhuga- og atvinnufólk í sirkus geti nýtt til æfinga.</p>
+
+  
+</section>
+
+
+    </main>
+
+
+  <footer id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col title">
+        Hafðu samband
+      </div>
+      <div class="col content">
+        
+          <ul>
+<li>sirkus@sirkus.is</li>
+<li>Hringleikur sirkuslistafélag</li>
+<li>620518-2980</li>
+</ul>
+
+        
+      </div>
+  </div>
+</div>
+</footer>
+
+
+  <script>
+
+  var menu = document.getElementById('main-navigation');
+  var istop = false;
+  window.addEventListener('scroll', function(e) {
+    if(menu.offsetTop-5<=window.scrollY){
+      if(!istop)
+      {
+        menu.className = "stuck";
+        istop = true;
+      }
+    }
+    else
+    {
+      if(istop)
+      {
+        menu.className = "";
+        istop = false;
+      }
+    }
+  });
+
+  
+  var num = Math.floor((Math.random() * 7) + 1);
+  document.getElementById("site-header").style.backgroundImage="url(../img/header"+num+".jpg)";
+
+  
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

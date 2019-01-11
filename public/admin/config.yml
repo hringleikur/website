@@ -4,14 +4,6 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "static/img/uploaded"
 public_folder: "/img/uploaded"
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: makai
-    api_key: 437166824495861
-accept_roles:
-    - admin
-    - editor
 collections:
   - label: "Icelandic Pages"
     name: "is-pages"
