@@ -7,8 +7,8 @@ public_folder: "/img/uploaded"
 media_library:
   name: cloudinary
   config:
-    cloud_name: makai
-    api_key: 437166824495861
+    cloud_name: hringleikur
+    api_key: 976281589193922
 accept_roles:
     - admin
     - editor
