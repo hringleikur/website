@@ -6,9 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Thomas Burke",
+  "license": "UNLICENSED",
   "dependencies": {
+    "js-yaml": "^3.12.1",
+    "klaw": "^3.0.0",
+    "mkdirp": "^0.5.1",
     "stickybits": "^3.5.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github-hringleikur:hringleikur/website.git"
   }
 }

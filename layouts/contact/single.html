@@ -1,0 +1,79 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-contact{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+
+{{ $base := "https://res.cloudinary.com/hringleikur/image/upload/" }}
+<div class="page-top" style="background-image: url({{ $base }}t_header/{{ strings.TrimPrefix $base .Params.image }});background-size: cover;">
+
+  <div class="intro intro-small">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{ .Title }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container contact-main">
+    <div class="contact-content">
+      {{ .Content }}
+      <ul>
+        <li><strong>{{ i18n "phone" | humanize }}: </strong>{{ .Site.Data.contact.phone }}</li>
+        <li><strong>{{ i18n "email" | humanize }}: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
+          {{ .Site.Data.contact.email }}</a></li>
+          {{ if .Site.Data.contact.address }}
+            <li><strong>{{ i18n "address" | humanize }}: </strong>{{ .Site.Data.contact.address }}</li>
+          {{ end }}
+      </ul>
+    </div>
+
+
+{{ if .Params.show_form }}
+    <div class="contact-form">
+
+                <form name="contact" method="POST" data-netlify="true">
+                <fieldset>
+                  <legend>{{ i18n "sendMessage" | humanize }}</legend>
+
+                  <!-- Name input-->
+                  <div class="form-group">
+
+                      <input id="name" name="name" type="text" placeholder="{{ i18n "yourName" | humanize }}" class="form-control">
+
+                  </div>
+
+                  <!-- Email input-->
+                  <div class="form-group">
+
+                      <input id="email" name="email" type="text" placeholder="{{ i18n "yourEmail" | humanize }}" class="form-control">
+
+                  </div>
+
+                  <!-- Message body -->
+                  <div class="form-group">
+
+                      <textarea class="form-control" id="message" name="message" placeholder="{{ i18n "yourMessage" | humanize }}" rows="5"></textarea>
+
+                  </div>
+
+                  <!-- Form actions -->
+                  <div class="form-group">
+
+                      <button type="submit" class="btn btn-primary btn-lg">{{ i18n "submit" | humanize }}</button>
+
+                  </div>
+                </fieldset>
+                </form>
+
+            </div>
+        {{ end }}
+    </div>
+</div>
+
+{{ end }}

@@ -1,0 +1,27 @@
+# Contact
+sendMessage:
+  other: senda skilabod
+yourName:
+  other: nafn
+yourEmail:
+  other: netfang
+yourMessage :
+  other: please enter your message
+submit:
+  other: stadfestur
+phone:
+  other: simi
+email:
+  other: netfang
+address:
+  other: postfang
+
+#auth
+authPleaseLogIn:
+  other: Please log In
+authUnlock:
+  other: Unlock
+authIncorrectPassword:
+  other: Incorrect password. Please try again.
+authEnterPassword:
+  other: Enter the password to continue. If you do not have the password, contact us for help.

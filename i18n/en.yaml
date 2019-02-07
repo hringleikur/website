@@ -1,0 +1,27 @@
+# Contact
+sendMessage:
+  other: send message
+yourName:
+  other: your name
+yourEmail:
+  other: your email
+yourMessage :
+  other: please enter yourmessage
+submit:
+  other: submit
+phone:
+  other: phone
+email:
+  other: email
+address:
+  other: address
+
+# Auth
+authPleaseLogIn:
+  other: Please log In
+authUnlock:
+  other: Unlock
+authIncorrectPassword:
+  other: Incorrect password. Please try again.
+authEnterPassword:
+  other: Enter the password to continue. If you do not have the password, contact us for help.

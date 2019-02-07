@@ -1,0 +1,15 @@
+
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <li class="menu-item-{{ .Name | urlize }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }} {{ .Identifier }}">
+      <a href="{{.URL}}">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+      </a>
+    </li>
+    {{end}}
+    {{ if .IsTranslated }}
+        {{ range .Translations }}
+            <li class="menu-item-lang"><a href="{{ .Permalink }}">{{ .Language.Lang }}</a></li>
+        {{ end}}
+    {{ end }}

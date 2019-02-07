@@ -1,0 +1,24 @@
+# Hugo default output directory
+public
+node_modules
+content/*
+!content/cms/*
+
+# Optional npm cache directory
+.npm
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store

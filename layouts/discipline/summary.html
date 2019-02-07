@@ -1,0 +1,12 @@
+<div class="discipline discipline-summary">
+  <div class="discipline-content">
+    {{ $base := "https://res.cloudinary.com/hringleikur/image/upload/" }}
+    <img
+        class="discipline-image"
+        src="{{ $base }}t_preview/{{ strings.TrimPrefix $base .Params.image }}">
+    <h2 class="discipline-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    <p>{{ .Params.description | plainify }}</p>
+  </div>
+</div>

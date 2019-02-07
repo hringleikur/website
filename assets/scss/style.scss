@@ -1,0 +1,94 @@
+// Font
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:300,400,700');
+
+// Bootstrap
+@import 'bootstrap/functions';
+@import 'bootstrap-variables';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+@import 'bootstrap/root';
+@import 'bootstrap/reboot';
+@import 'bootstrap/grid';
+@import 'bootstrap/type';
+@import 'bootstrap/tables';
+// @import "bootstrap/images";
+// @import "bootstrap/code";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+// @import "bootstrap/transitions";
+// @import "bootstrap/dropdown";
+// @import "bootstrap/button-group";
+// @import "bootstrap/input-group";
+// @import "bootstrap/custom-forms";
+// @import "bootstrap/nav";
+// @import "bootstrap/navbar";
+// @import "bootstrap/card";
+// @import "bootstrap/breadcrumb";
+// @import "bootstrap/pagination";
+// @import "bootstrap/badge";
+// @import "bootstrap/jumbotron";
+// @import "bootstrap/alert";
+// @import "bootstrap/progress";
+// @import "bootstrap/media";
+// @import "bootstrap/list-group";
+// @import "bootstrap/close";
+// @import "bootstrap/modal";
+// @import "bootstrap/tooltip";
+// @import "bootstrap/popover";
+// @import "bootstrap/carousel";
+// @import "bootstrap/print";
+@import 'bootstrap/utilities';
+
+// Libraries
+@import 'libraries/hamburgers/hamburgers';
+
+// Components
+@import 'components/reset';
+@import 'components/page';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sub-footer';
+@import 'components/logo';
+@import 'components/main-menu';
+@import 'components/main-menu-mobile';
+@import 'components/hamburger';
+@import 'components/buttons';
+@import 'components/call';
+@import 'components/title';
+@import 'components/content';
+@import 'components/intro';
+@import 'components/strip';
+@import 'components/whitebox';
+@import 'components/feature';
+
+// Pages
+@import 'pages/home';
+@import 'pages/disciplines/discipline-summary';
+@import 'pages/contact/contact-page';
+
+body {
+  font-size: 1rem;
+  font-family: $font-family-base;
+}
+
+.intro-small
+{
+  h1 {
+    color:black;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+  }
+}
+.show-logged-in
+{
+  display:none;
+}
+
+.page-top
+{
+  min-height:260px;
+  background-position: 0 50%;
+}
+
+.page-main {
+  margin-top:2em;
+}

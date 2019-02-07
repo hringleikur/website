@@ -1,9 +1,77 @@
+{{ define "title" }}{{ end}}
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-home{{ end }}
+{{ define "header_classes" }}header-transparent{{ end }}
+{{ define "meta"}}{{ end }}
+
 {{ define "main" }}
-    <main aria-role="main" >
+{{ $base := "https://res.cloudinary.com/hringleikur/image/upload/" }}
+<div class="page-top" style="background-image: url({{ $base }}t_header/{{ strings.TrimPrefix $base .Params.image }});background-size: cover;">
 
-      <section class="homepage-content container"> {{.Content}}</section>
+<div class="intro pt-2 pb-2">
+  <div class="container">
+    <img alt="Home" src="{{ .Site.BaseURL }}images/logo.svg"></a>
+  </div>
+</div>
 
-      {{ partial "about.html" . }}
+{{ if .Params.show_banner }}
+<div class="container pt-2 pb-2">
+  <div class="call">
+    <div class="call-box-top">
+      <div class="call-phone"><strong>Phone: </strong> {{ .Site.Data.contact.phone }} </div>
+      <div class="call-email"><strong>Email: </strong>
+        <a href="mailto:{{ .Site.Data.contact.email }}">
+          {{ .Site.Data.contact.email }}
+        </a>
+      </div>
+    </div>
+    <div class="call-box-bottom">
+      {{ with .Site.GetPage "hafa-samband" }}<a href="{{ .Permalink }}" class="button">{{ .Title }}</a>{{ end }}
 
-    </main>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+</div>
+
+<div class="container pt-2 pb-2">{{ .Content }}</div>
+
+{{ if not (eq .Params.show_news "never") }}
+  {{ $articles := where (where .Site.RegularPages "Type" "news") ".Params.featured" true }}
+  {{if gt (len $articles) 0}}
+  <div class="container{{ if eq .Params.show_news "members" }} show-logged-in{{ end }}" id="homepage-news">
+    <div class="row justify-content-start">
+      {{ $articles := where (where .Site.RegularPages "Type" "news") ".Params.featured" true }}
+      {{ range last 1 (sort $articles ".Params.date") }}
+      <div>
+        {{ .Render "summary" }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{end}}
+{{end}}
+
+{{ $disciplines := where (where .Site.RegularPages "Type" "discipline") ".Params.featured" true }}
+{{if gt (len $disciplines) 0}}
+<div class="container pt-4 pt-md-6 pb-md-12" id="homepage-disciplines">
+  <div class="row justify-content-start">
+    {{ $disciplines := where (where .Site.RegularPages "Type" "discipline") ".Params.featured" true }}
+    {{ range first 6 (sort $disciplines ".Params.weight") }}
+    <div class="col-12 col-md-4 mb-1">
+      {{ .Render "summary" }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{end}}
+
+
+
+
+{{ end }}
+
+{{ define "footer_js" }}
+
 {{ end }}

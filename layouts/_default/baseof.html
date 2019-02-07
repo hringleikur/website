@@ -1,18 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+<html class="no-js" lang="{{ .Site.LanguageCode }}">
 
-<html lang="{{ .Site.LanguageCode }}">
 <head>
   <meta charset="utf-8">
-
-<meta name="google-site-verification" content="721N_wFjJ5vvT1IjhhperzSWTDBoNeqrKxcZdIcnIR0" />  <title>
-    {{ if .IsHome }}
-        {{ .Site.Title }}
-    {{ else if .Params.heading }}
-        {{ .Params.heading }}
-    {{ else }}
-        {{ .Title }} | {{ .Site.Title }}
-    {{ end }}
-  </title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {{ block "meta" . }}{{end}}
 
   {{ if .IsTranslated }}
     {{ range .AllTranslations }}
@@ -20,71 +14,49 @@
     {{ end }}
   {{ end }}
 
-  <link rel="stylesheet" href="/css/site.css">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- CSS -->
+  {{- $inServerMode := .Site.IsServer }}
+  {{- $cssTarget := "css/style.css" }}
+  {{- $cssOptions := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
+  {{- $style := resources.Get "scss/style.scss" | toCSS $cssOptions }}
+  <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
+
+  {{ block "header_css" . }}{{ end }}
+
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
 
-<body class="{{ if .IsHome }}homepage{{ end }}">
+<body class='page {{ block "body_classes" . }}{{ end }}'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+    <ul>
+      {{ partial "main-menu.html" . }}
+    </ul>
+  </div>
 
-  <header id="site-header">
-    <h1>{{.Site.Title}}</h1>
-  </header>
 
-  <nav id="main-navigation">
-    <div class="inner">
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      {{ end }}
-
-      {{ if .IsTranslated }}
-          {{ range .Translations }}
-              <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-          {{ end}}
-      {{ end }}
-    </div>
-  </nav>
-
-  {{ block "main" . }}{{ end }}
+  <div class="wrapper">
+    {{ partial "header.html" . }}
+    {{ block "main" . }}{{ end }}
+  </div>
 
   {{ partial "footer.html" . }}
+  {{ partial "sub-footer.html" . }}
 
-  <script>
+  {{ $scripts := resources.Get "js/scripts.js" }}
+  {{ if .Site.IsServer }}
+  <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
+  {{ else }}
+  <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
+  {{ end }}
 
-  var menu = document.getElementById('main-navigation');
-  var istop = false;
-  window.addEventListener('scroll', function(e) {
-    if(menu.offsetTop-5<=window.scrollY){
-      if(!istop)
-      {
-        menu.className = "stuck";
-        istop = true;
-      }
-    }
-    else
-    {
-      if(istop)
-      {
-        menu.className = "";
-        istop = false;
-      }
-    }
-  });
+  {{ block "footer_js" . }}{{ end }}
 
-  // Randomize header image
-  var num = Math.floor((Math.random() * 7) + 1);
-  document.getElementById("site-header").style.backgroundImage="url(../img/header"+num+".jpg)";
+  {{ partial "google-analytics.html" . }}
 
-  // Handle Netlify login
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 </body>
 </html>

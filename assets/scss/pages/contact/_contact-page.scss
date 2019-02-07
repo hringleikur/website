@@ -1,0 +1,43 @@
+
+
+.page-contact {
+  .contact-main{
+    display: block;
+    align-items: top;
+    margin-top:2rem;
+  }
+
+  .contact-content
+  {
+      flex-grow: 2;
+  }
+
+  .contact-content ul, .contact-content li
+  {
+    list-style-type: none
+  }
+
+  .contact-form
+  {
+    background-color:#eee;
+    padding:1rem 2rem;
+    margin:1rem 0;
+    border-radius:10px;
+    flex-grow:1
+  }
+
+  @include media-breakpoint-up(sm) {
+
+  }
+  @include media-breakpoint-up(md) {
+    .contact-main {
+      display:flex;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+
+  }
+  @include media-breakpoint-up(xl) {
+
+  }
+}
