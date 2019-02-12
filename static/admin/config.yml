@@ -271,12 +271,12 @@ collections:
         name: "body_is"
         t_root: "body"
         widget: "markdown"
-        required: true
+        required: false
       - label: "Body (English)"
         name: "body_en"
         t_root: "body"
         widget: "markdown"
-        required: false
+        required: true
       - name: layout
         widget: hidden
         default: news
@@ -297,7 +297,7 @@ collections:
     delete: true
     extension: "yml"
     format: "yml"
-    identifier_field : "title_is"
+    identifier_field : "title_en"
     fields:
       - label: "Date"
         name: "date"
@@ -312,12 +312,12 @@ collections:
         name: title_is
         t_root: "title"
         widget: string
-        required: true
+        required: false
       - label: "Title (English)"
         name: title_en
         t_root: "title"
         widget: string
-        required: false
+        required: true
       - label: "Color"
         name: color
         widget: string
@@ -330,12 +330,12 @@ collections:
         name: "description_is"
         t_root: "description"
         widget: "text"
-        required: true
+        required: false
       - label: "Short Description (English)"
         name: "description_en"
         t_root: "description"
         widget: "text"
-        required: false
+        required: true
       - label: "Gallery"
         name: "gallery"
         widget: "list"
@@ -344,12 +344,12 @@ collections:
             name: title_is
             t_root: "title"
             widget: string
-            required: true
+            required: false
           - label: "Title (English)"
             name: title_en
             t_root: "title"
             widget: string
-            required: false
+            required: true
           - label: Image
             name: image
             widget: image
@@ -367,12 +367,12 @@ collections:
         name: "body_is"
         t_root: "body"
         widget: "markdown"
-        required: true
+        required: false
       - label: "Page Body (English)"
         name: "body_en"
         t_root: "body"
         widget: "markdown"
-        required: false
+        required: true
       - name: layout
         widget: hidden
         default: discipline
