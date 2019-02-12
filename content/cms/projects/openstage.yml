@@ -1,12 +1,17 @@
-title_en: "Open Stage"
-title_is: "Open Stage"
-type: project
-layout : project
+date: '2019-02-12 12:14pm'
 featured: true
-Date: '2019-01-24 12:00am'
-image: "https://res.cloudinary.com/hringleikur/image/upload/v1549856656/hringleikur/openstage.jpg"
-description_is: ""
-description_en: "Something about it"
-body_is: ""
-body_en: ""
-color : "#6b5643"
+title_is: Open Stage
+title_en: Open Stage
+color: '#6b5643'
+image: >-
+  https://res.cloudinary.com/hringleikur/image/upload/v1549856656/hringleikur/openstage.jpg
+description_is: ''
+description_en: Something about it
+body_is: ''
+body_en: >-
+  Performers grow through performance, so in an effort to increase the
+  opportunities to get up on stage and practice our craft, we are working to
+  build and open stage community in Iceland. Work is underway in exploring
+  venues, and we are excited to have our first open stage this spring!
+layout: project
+type: project
