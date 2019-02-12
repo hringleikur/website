@@ -1,0 +1,45 @@
+baseURL: "/"
+defaultContentLanguage: "en"
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+  - RSS
+  - sitemap
+
+params:
+  google_analytics_id=""
+
+languages:
+  is:
+    title: "Hringleikur"
+    languageName: "íslensk"
+    languageCode: "is"
+    weight: 1
+    menu:
+      main:
+      - name: "Um Okkur"
+        url: "/is/um-okkur/"
+        weight: 2
+      - name: "Hafa samband"
+        url: "/is/hafa-samband/"
+        weight: 3
+      - name: "Taka þátt"
+        url: "/is/join"
+        identifier: "logout-link"
+        weight: 5
+  en:
+    title: "Hringleikur"
+    languageName: "English"
+    languageCode: "en-us"
+    weight: 2
+    menu:
+      main:
+      - name: "About"
+        url: "/about/"
+        weight: 2
+      - name: "Contact"
+        url: "/contact/"
+        weight: 3
+      - name: "Join"
+        url: "/join/"
+        weight: 5

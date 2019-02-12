@@ -1,0 +1,33 @@
+ul.social
+{
+  justify-content:flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display:flex;
+
+  li {
+    display:block;
+    margin:0;
+    padding:0;
+  }
+  svg {
+    display: inline-block;
+    fill: lighten($secondary, 50%);
+  }
+  a {
+    display:block;
+    height: 2rem;
+    width: 3rem;
+    padding:0;
+    margin:0;
+  }
+  svg{
+    height: 100%;
+    width: 100%;
+  }
+  .email
+  {
+    display:none
+  }
+}

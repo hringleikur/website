@@ -1,0 +1,247 @@
+
+
+// Bootstrap
+@import 'bootstrap/functions';
+@import 'bootstrap/variables';
+@import 'bootstrap-variables';
+@import 'bootstrap/mixins';
+@import 'bootstrap/root';
+@import 'bootstrap/reboot';
+@import 'bootstrap/grid';
+@import 'bootstrap/type';
+@import 'bootstrap/tables';
+// @import "bootstrap/images";
+// @import "bootstrap/code";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+// @import "bootstrap/transitions";
+// @import "bootstrap/dropdown";
+// @import "bootstrap/button-group";
+// @import "bootstrap/input-group";
+// @import "bootstrap/custom-forms";
+// @import "bootstrap/nav";
+// @import "bootstrap/navbar";
+// @import "bootstrap/card";
+// @import "bootstrap/breadcrumb";
+// @import "bootstrap/pagination";
+// @import "bootstrap/badge";
+// @import "bootstrap/jumbotron";
+// @import "bootstrap/alert";
+// @import "bootstrap/progress";
+// @import "bootstrap/media";
+// @import "bootstrap/list-group";
+// @import "bootstrap/close";
+// @import "bootstrap/modal";
+// @import "bootstrap/tooltip";
+// @import "bootstrap/popover";
+// @import "bootstrap/carousel";
+// @import "bootstrap/print";
+@import 'bootstrap/utilities';
+
+// Libraries
+@import 'libraries/hamburgers/hamburgers';
+
+// Components
+@import 'components/reset';
+@import 'components/page';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sub-footer';
+@import 'components/main-menu';
+@import 'components/main-menu-mobile';
+@import 'components/hamburger';
+@import 'components/buttons';
+@import 'components/call';
+@import 'components/title';
+@import 'components/content';
+@import 'components/strip';
+@import 'components/whitebox';
+@import 'components/feature';
+@import 'components/social';
+
+// Pages
+@import 'pages/home';
+@import 'pages/disciplines/discipline-summary';
+@import 'pages/contact/contact-page';
+
+body {
+  font-size: 1rem;
+  font-family: $font-family-base;
+}
+
+footer {
+  background-color:black;
+  color:#ccc;
+  padding:3vh;
+  margin-top:5rem;
+}
+
+footer .title
+{
+  font-size:5rem;
+  color:rgba(255,255,255,0.3)
+}
+
+.page-home h2{
+  line-height:2rem;
+  font-size:3rem;
+  margin:0 0 0 0;padding:3rem 0 0 0;
+  color:#ccc;
+
+  @include media-breakpoint-up(lg) {
+    line-height:2.5rem;
+    font-size:5rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height:3rem;
+    font-size:6rem;
+  }
+}
+
+.page-project-single
+{
+  #main-navigation
+  {
+    background-color:darkred;
+    border:1px solid darkred;
+  }
+  .content
+  {
+    .content-top {
+      background: #000 url() no-repeat center center;
+      background-size: fit;
+      height:300px;
+      position:relative;
+      box-shadow: 0px 0px 15px black;
+    }
+
+    .content-main
+    {
+      background-color:darkred;
+      display:flex;
+      .container{
+        max-width:930px;
+        background-color:#eee;
+        padding:2rem;
+      }
+
+      h1
+      {
+        font-size:3rem;
+        line-height:3rem;
+        white-space: nowrap;
+        color:#000;
+        margin:0 auto;
+        padding:0;
+        display:block;
+      }
+    }
+  }
+}
+
+.project-summary
+{
+  margin-bottom:1rem;
+  a{
+    color:#fff;
+    text-decoration: none
+  }
+  img {
+    width:100%;
+  }
+  h3 {
+    margin:-25px 0 0 -2px;
+    font-size:30px;
+    line-height:30px;
+
+    @include media-breakpoint-up(lg) {
+      font-size:40px;
+      line-height:40px;
+      margin:-32px 0 0 -3px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size:50px;
+      line-height:50px;
+      margin:-40px 0 0 -5px;
+    }
+  }
+  p{
+    display:none
+  }
+}
+
+.news-summary
+{
+  margin-bottom:1rem;
+
+  .news-content
+  {
+    h3 {
+      padding:0;margin:0;
+      position:absolute;
+      bottom:-0.3rem;
+      left:-0.2rem;
+      font-size:30px;
+      line-height:30px;
+
+      @include media-breakpoint-up(lg) {
+        font-size:40px;
+        line-height:40px;
+        bottom:-0.4rem;
+        left:-0.3rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size:50px;
+        line-height:50px;
+        bottom:-0.5rem;
+        left:-0.5rem;
+      }
+    }
+
+    p
+    {
+      display:block;
+      padding:4rem;
+    }
+
+    color:#fff;
+    text-decoration: none;
+    display:block;
+    background-color:#999;
+    position:relative;
+    overflow:hidden;
+  }
+}
+
+.content
+{
+  flex:1;
+  display:flex;
+  flex-direction: column;
+  .content-top
+  {
+    background: #414156;
+    box-shadow: 0px 0px 5px black;
+    z-index:1;
+
+    h1 {
+      font-size:3rem;
+      line-height:140px;
+      white-space: nowrap;
+      color:lighten($secondary, 50%);
+      margin:0;padding:0;
+    }
+  }
+  .content-main
+  {
+    flex-grow:1;
+  }
+
+}
+
+.page-default-single .content-top{
+  margin-bottom:2rem;
+}

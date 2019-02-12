@@ -1,0 +1,33 @@
+
+{{ define "header_css" }}
+{{ if .Params.color }}
+<style>
+#main-navigation   {
+  background-color:{{ .Params.color }}!important;
+  border:1px solid {{ .Params.color }}!important;
+}
+.content-main
+{
+  background-color:{{ .Params.color }}!important;
+}
+</style>
+{{ end }}
+{{ end }}
+{{ define "body_classes" }}page-project-single{{ end }}
+
+{{ define "main" }}
+{{ $base := "https://res.cloudinary.com/hringleikur/image/upload/" }}
+<div class="content">
+  <div class="content-top" {{ if .Params.image }} style="background-image: url({{ $base }}c_scale,e_multiply,h_400,l_overlay3.png,w_1600/{{ strings.TrimPrefix $base .Params.image }});"{{ end }}>
+
+  </div>
+
+  <div class="content-main">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+      <div class="row"><div class="col-md-8">
+      {{.Content}}
+    </div></div></div>
+  </div>
+</div>
+{{ end }}

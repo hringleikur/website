@@ -1,45 +1,381 @@
 backend:
   name: git-gateway
   branch: master
-publish_mode: editorial_workflow
 media_folder: "static/img/uploaded"
 public_folder: "/img/uploaded"
+t_preprocess_images: true
+t_default_image_transformation : strip
 media_library:
   name: cloudinary
   config:
     cloud_name: hringleikur
     api_key: 976281589193922
 accept_roles:
-    - admin
-    - editor
+  - admin
+  - editor
 collections:
-  - label: "Icelandic Pages"
-    name: "is-pages"
+  - name: "Settings"
+    label: "Settings"
+    delete : false
+    extension: "yml"
+    format: "yml"
+    t_translations : true
+    editor:
+      preview: false
     files:
-      - label: "Um okkur"
-        name: "umokkur"
-        file: "content/is/about.md"
+      - label: Contact Information
+        name: contact
+        file: "data/contact.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Hafa samband"
-        name: "hafasamband"
-        file: "content/is/contact.md"
+          - label: Email
+            name: email
+            widget: string
+            required: true
+          - label: Phone
+            name: phone
+            widget: string
+            required: false
+          - label: Address
+            name: address
+            widget: text
+            required: false
+      - label: Social Media
+        name: social
+        file: "data/social.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-  - label: "English Pages"
-    name: "en-pages"
+          - label: Twitter
+            name: twitter
+            widget: string
+            required: false
+          - label: Instagram
+            name: instagram
+            widget: string
+            required: false
+          - label: Facebook
+            name: facebook
+            widget: string
+            required: false
+  - name: "pages"
+    label: "Pages"
+    t_translations: true # Custom Key
+    delete: false
+    extension: "yml"
+    format: "yml"
     files:
-      - label: "About"
+      - label: "Heim / Home"
+        name: "heim"
+        file: "content/cms/_index.yml"
+        t_languages: # Custom Key
+          - code: en
+          - code: is
+            langIfEmpty: "is"
+            file: "is/"
+        fields:
+          - label: "Show projects"
+            name: "show_projects"
+            widget: "boolean"
+            required: true
+            default: true
+          - label: "Body (Icelandic)"
+            name: "body_is"
+            t_root: "body"
+            widget: "markdown"
+            required: true
+          - label: "Body (English)"
+            name: "body_en"
+            t_root: "body"
+            widget: "markdown"
+            required: false
+          - name: layout
+            widget: hidden
+          - name: date
+            widget: hidden
+          - name: type
+            widget: hidden
+      - label: "Um okkur / About"
         name: "about"
-        file: "content/en/about.md"
+        file: "content/cms/about.yml"
+        t_languages: # Custom Key
+          - code: en
+          - code: is
+            langIfEmpty: "en"
+            file: "is/um-okkur"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Contact"
+          - label: "Title (Icelandic)"
+            name: title_is
+            t_root: "title"
+            widget: string
+            required: true
+          - label: "Title (English)"
+            name: title_en
+            t_root: "title"
+            widget: string
+            required: false
+          - label: "Banner Image"
+            name: "image"
+            widget: "image"
+            required: false
+          - label: "Body (Icelandic)"
+            name: "body_is"
+            t_root: "body"
+            widget: "markdown"
+            required: true
+          - label: "Body (English)"
+            name: "body_en"
+            t_root: "body"
+            widget: "markdown"
+            required: false
+          - name: layout
+            widget: hidden
+          - name: date
+            widget: hidden
+          - name: type
+            widget: hidden
+      - label: "Join"
+        name: "join"
+        file: "content/cms/join.yml"
+        t_languages: # Custom Key
+          - code: en
+          - code: is
+            langIfEmpty: "en"
+            file: "is/join"
+        fields:
+          - label: "Title (Icelandic)"
+            name: title_is
+            t_root: "title"
+            widget: string
+            required: true
+          - label: "Title (English)"
+            name: title_en
+            t_root: "title"
+            widget: string
+            required: false
+          - label: "Banner Image"
+            name: "image"
+            widget: "image"
+            required: false
+          - label: "Body (Icelandic)"
+            name: "body_is"
+            t_root: "body"
+            widget: "markdown"
+            required: true
+          - label: "Body (English)"
+            name: "body_en"
+            t_root: "body"
+            widget: "markdown"
+            required: false
+          - name: layout
+            widget: hidden
+          - name: date
+            widget: hidden
+          - name: type
+            widget: hidden
+      - label: "Hafa samband / Contact"
         name: "contact"
-        file: "content/en/contact.md"
+        file: "content/cms/contact.yml"
+        t_languages: # Custom Key
+          - code: en
+          - code: is
+            langIfEmpty: "en"
+            file: "is/hafa-samband"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Title (Icelandic)"
+            name: title_is
+            t_root: "title"
+            widget: string
+            required: true
+          - label: "Title (English)"
+            name: title_en
+            t_root: "title"
+            widget: string
+            required: false
+          - label: "Banner Image"
+            name: "image"
+            widget: "image"
+            required: false
+          - label: "Show Form"
+            name: "show_form"
+            widget: "boolean"
+            required: true
+            default: true
+          - label: "Body (Icelandic)"
+            name: "body_is"
+            t_root: "body"
+            widget: "markdown"
+            required: true
+          - label: "Body (English)"
+            name: "body_en"
+            t_root: "body"
+            widget: "markdown"
+            required: false
+          - name: layout
+            widget: hidden
+          - name: date
+            widget: hidden
+          - name: type
+            widget: hidden
+  - name: "article"
+    label: "News Article"
+    folder: "content/cms/news"
+    t_translations: true
+    t_languages:
+      - code: en
+      - code: is
+        langIfEmpty: "en"
+        folder: "is/frettir"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true
+    delete: true
+    extension: "yml"
+    format: "yml"
+    identifier_field : "title_is"
+    fields:
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD hh:mma"
+        required: true
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+      - label: "Color"
+        name: color
+        widget: string
+        required: false
+      - label: "Title (Icelandic)"
+        name: title_is
+        t_root: "title"
+        widget: string
+        required: true
+      - label: "Title (English)"
+        name: title_en
+        t_root: "title"
+        widget: string
+        required: false
+      - label: "Primary Image"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Caption (Icelandic)"
+        name: caption_is
+        t_root: "caption"
+        widget: string
+        required: false
+      - label: "Caption (English)"
+        name: caption_en
+        t_root: "caption"
+        widget: string
+        required: false
+      - label: "Body (Icelandic)"
+        name: "body_is"
+        t_root: "body"
+        widget: "markdown"
+        required: true
+      - label: "Body (English)"
+        name: "body_en"
+        t_root: "body"
+        widget: "markdown"
+        required: false
+      - name: layout
+        widget: hidden
+        default: news
+      - name: type
+        widget: hidden
+        default: news
+  - name: "project"
+    label: "Project / Verkefni"
+    folder: "content/cms/projects"
+    t_translations: true
+    t_languages:
+      - code: en
+      - code: is
+        langIfEmpty: "en"
+        folder: "is/verkefni"
+    slug: "{{year}}-{{slug}}"
+    create: true
+    delete: true
+    extension: "yml"
+    format: "yml"
+    identifier_field : "title_is"
+    fields:
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD hh:mma"
+        required: true
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+      - label: "Title (Icelandic)"
+        name: title_is
+        t_root: "title"
+        widget: string
+        required: true
+      - label: "Title (English)"
+        name: title_en
+        t_root: "title"
+        widget: string
+        required: false
+      - label: "Color"
+        name: color
+        widget: string
+        required: false
+      - label: "Primary Image"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Short Description (Icelandic)"
+        name: "description_is"
+        t_root: "description"
+        widget: "text"
+        required: true
+      - label: "Short Description (English)"
+        name: "description_en"
+        t_root: "description"
+        widget: "text"
+        required: false
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        fields:
+          - label: "Title (Icelandic)"
+            name: title_is
+            t_root: "title"
+            widget: string
+            required: true
+          - label: "Title (English)"
+            name: title_en
+            t_root: "title"
+            widget: string
+            required: false
+          - label: Image
+            name: image
+            widget: image
+          - label: "Caption (Icelandic)"
+            name: caption_is
+            t_root: "caption"
+            widget: string
+            required: false
+          - label: "Caption (English)"
+            name: caption_en
+            t_root: "caption"
+            widget: string
+            required: false
+      - label: "Page Body (Icelandic)"
+        name: "body_is"
+        t_root: "body"
+        widget: "markdown"
+        required: true
+      - label: "Page Body (English)"
+        name: "body_en"
+        t_root: "body"
+        widget: "markdown"
+        required: false
+      - name: layout
+        widget: hidden
+        default: discipline
+      - name: type
+        widget: hidden
+        default: discipline

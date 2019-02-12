@@ -1,0 +1,21 @@
+.discipline-summary {
+  display: flex;
+  align-items: flex-start;
+
+  .discipline-image {
+      max-width: 100%;
+      height: auto;
+
+  }
+  .discipline-content {
+    flex: 1;
+    .discipline-title {
+      font-family: $font-family-heading;
+      font-size: 1.6rem;
+
+    }
+    p {
+      color: $secondary;
+    }
+  }
+}

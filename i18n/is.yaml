@@ -1,0 +1,25 @@
+# Contact
+sendMessage:
+  other: senda skilaboð
+yourName:
+  other: nafn
+yourEmail:
+  other: netfang
+yourMessage:
+  other: skilaboð
+submit:
+  other: senda
+phone:
+  other: simi
+email:
+  other: netfang
+address:
+  other: postfang
+news:
+  other: fréttir
+being:
+  other: um okkur
+doing:
+  other: verkefni
+happening:
+  other: fréttir

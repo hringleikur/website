@@ -1,9 +1,34 @@
+{{ define "title" }}{{ end}}
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-home{{ end }}
+{{ define "meta"}}{{ end }}
+
 {{ define "main" }}
-    <main aria-role="main" >
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h2>{{ i18n "being" | humanize }}</h2>
+      {{ .Content }}
+      {{ $articles := where (where .Site.RegularPages "Type" "news") ".Params.featured" true }}
+      {{if gt (len $articles) 0}}
+      <h2>{{ i18n "happening" | humanize }}</h2>
+        {{ range last 5 (sort $articles ".Params.date") }}
+        {{ .Render "summary" }}
+        {{ end }}
+      {{end}}
+    </div>
 
-      <section class="homepage-content container"> {{.Content}}</section>
 
-      {{ partial "about.html" . }}
+    {{ $projects := where (where .Site.RegularPages "Type" "project") ".Params.featured" true }}
+    {{if gt (len $projects) 0}}
+    <div class="col-12 col-md-6">
+      <h2>{{ i18n "doing" | humanize }}</h2>
+        {{ range last 5 (sort $projects ".Params.date") }}
+        {{ .Render "summary" }}
+        {{ end }}
+    </div>
+    {{end}}
 
-    </main>
+</div>
+</div>
 {{ end }}

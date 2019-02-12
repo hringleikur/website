@@ -1,0 +1,25 @@
+# Contact
+sendMessage:
+  other: send message
+yourName:
+  other: your name
+yourEmail:
+  other: your email
+yourMessage :
+  other: please enter yourmessage
+submit:
+  other: submit
+phone:
+  other: phone
+email:
+  other: email
+address:
+  other: address
+news:
+  other: news
+being:
+  other: being
+doing:
+  other: doing
+happening:
+  other: happening

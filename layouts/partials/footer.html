@@ -1,14 +1,13 @@
-<footer id="contact">
+<div class="footer">
   <div class="container">
     <div class="row">
-      <div class="col title">
-        {{ with $.Site.GetPage "page" "contact.md" }}{{ .Title }}{{ end }}
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">{{ with .Site.GetPage "/" }}<a href="{{ .Permalink }}">{{.Site.Title}}</a>{{ end }}</h3>
+          {{ partial "social.html" . }}
+          {{ partial "main-menu.html" . }}
+        </div>
       </div>
-      <div class="col content">
-        {{ with $.Site.GetPage "page" "contact.md" }}
-          {{ .Content }}
-        {{ end }}
-      </div>
+    </div>
   </div>
 </div>
-</footer>
