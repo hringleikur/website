@@ -4,7 +4,9 @@
   "description": "Hringleikur Website on Hugo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test.js",
+    "prebuild": "node ./build.js",
+    "build": "hugo"
   },
   "author": "Thomas Burke",
   "license": "UNLICENSED",

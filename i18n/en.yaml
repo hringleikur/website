@@ -15,13 +15,11 @@ email:
   other: email
 address:
   other: address
-
-# Auth
-authPleaseLogIn:
-  other: Please log In
-authUnlock:
-  other: Unlock
-authIncorrectPassword:
-  other: Incorrect password. Please try again.
-authEnterPassword:
-  other: Enter the password to continue. If you do not have the password, contact us for help.
+news:
+  other: news
+being:
+  other: being
+doing:
+  other: doing
+happening:
+  other: happening

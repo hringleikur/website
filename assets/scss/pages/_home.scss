@@ -1,7 +1,4 @@
 .page-home {
-  .intro img {
-    width:80%;
-  }
   .logo img {display:none;}
   @include media-breakpoint-up(sm) {
     background-size: 90%;
@@ -20,18 +17,4 @@
     background-position: 100% -90px;
   }
 
-}
-
-#homepage-news {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9de96+0,8ab66b+44,398235+100;Green+3D+%233 */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f8f9+0,e5ebee+50,d7dee3+51,f5f7f9+100;White+Gloss */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcfdfe+0,f1f7f9+40,e2eff2+100 */
-  background: #fcfdfe; /* Old browsers */
-  background: -moz-linear-gradient(top, #fcfdfe 0%, #f1f7f9 40%, #e2eff2 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #fcfdfe 0%,#f1f7f9 40%,#e2eff2 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #fcfdfe 0%,#f1f7f9 40%,#e2eff2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfdfe', endColorstr='#e2eff2',GradientType=0 ); /* IE6-9 */
-  border-radius:20px;
-  padding:1em 2em;
-  border:10px solid white;
 }

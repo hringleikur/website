@@ -32,15 +32,38 @@
 </head>
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
+
   <div id="main-menu-mobile" class="main-menu-mobile">
-    <ul>
       {{ partial "main-menu.html" . }}
-    </ul>
   </div>
 
 
   <div class="wrapper">
-    {{ partial "header.html" . }}
+    {{ with .Site.GetPage "/" }}
+    <a href="{{ .Permalink }}">
+      <header id="site-header" style="background-image: url(https://res.cloudinary.com/hringleikur/image/upload/v1549803585/smoke.jpg)">
+        <h1>{{.Site.Title}}</h1>
+      </header>
+    </a>
+    {{ end }}
+
+    <nav id="main-navigation">
+      <div class="inner">
+
+        <div class="main-menu">
+            {{ partial "main-menu.html" . }}
+        </div>
+
+        <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" role="presentation" aria-label="mobile menu trigger">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+      </div>
+    </nav>
+
+
     {{ block "main" . }}{{ end }}
   </div>
 

@@ -1,0 +1,12 @@
+<div class="project project-summary">
+  <div class="project-content">
+    {{ $base := "https://res.cloudinary.com/hringleikur/image/upload/" }}
+    <a href="{{ .Permalink }}"><img
+        class="project-image"
+        src="{{ $base }}{{ strings.TrimPrefix $base .Params.image }}">
+    <h3>
+      {{ .Title }}
+    </h3></a>
+    <p>{{ .Params.description | plainify }}</p>
+  </div>
+</div>

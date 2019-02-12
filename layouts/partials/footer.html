@@ -3,10 +3,9 @@
     <div class="row">
       <div class="col-12">
         <div class="footer-inner">
-          <h3 class="footer-title">{{.Site.Title}}</h3>
-          <ul class="footer-menu">
-            {{ partial "main-menu.html" . }}
-          </ul>
+          <h3 class="footer-title">{{ with .Site.GetPage "/" }}<a href="{{ .Permalink }}">{{.Site.Title}}</a>{{ end }}</h3>
+          {{ partial "social.html" . }}
+          {{ partial "main-menu.html" . }}
         </div>
       </div>
     </div>
