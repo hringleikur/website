@@ -1,12 +1,30 @@
-title_en: "Youth Circus"
-title_is: "Æskusirkus"
-type: project
-layout : project
+date: '2019-02-12 12:04pm'
 featured: true
-Date: '2019-01-24 12:00am'
-image: "https://res.cloudinary.com/hringleikur/image/upload/v1549856656/hringleikur/aesku.png"
-description_is: ""
-description_en: "Youth circus in Iceland with winter and summer classes."
-body_is: ""
-body_en: ""
-color : "#3e042c"
+title_is: Æskusirkus
+title_en: Youth Circus
+color: '#3e042c'
+image: >-
+  https://res.cloudinary.com/hringleikur/image/upload/v1549856656/hringleikur/aesku.png
+description_is: ''
+description_en: Youth circus in Iceland with winter and summer classes.
+gallery:
+  - title_en: Group Acrobatics
+    image: >-
+      https://res.cloudinary.com/hringleikur/image/upload/v1549973436/aesku/skoli3.jpg
+  - title_en: Aerials
+    image: >-
+      https://res.cloudinary.com/hringleikur/image/upload/v1549973436/aesku/skoli5.jpg
+  - title_en: Acro
+    image: >-
+      https://res.cloudinary.com/hringleikur/image/upload/v1549973436/aesku/skoli4.jpg
+  - title_en: Diablo
+    image: >-
+      https://res.cloudinary.com/hringleikur/image/upload/v1549973436/aesku/img_5390.jpg
+body_is: ''
+body_en: >-
+  Some of the founding members of Hringleikur started organizing youth circus
+  classes in Iceland several years ago, and have built the youth circus into a
+  year-long program with full day classes in the summer as well as weekend and
+  evening classes during the school year.
+layout: project
+type: project
