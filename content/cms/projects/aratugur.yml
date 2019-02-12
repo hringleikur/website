@@ -1,12 +1,16 @@
-title_en: "A Decade of Circus"
-title_is: "Áratugur af sirkus"
-type: project
-layout : project
+date: '2019-02-12 12:16pm'
 featured: true
-Date: '2019-01-24 12:00am'
-image: "https://res.cloudinary.com/hringleikur/image/upload/v1549856656/hringleikur/aratugur.jpg"
-description_is: ""
-description_en: "Classic circus show celebating a decade of Icelandic circus."
-body_is: ""
-body_en: ""
-color : "#243f5a"
+title_is: Áratugur af sirkus
+title_en: A Decade of Circus
+color: '#243f5a'
+image: >-
+  https://res.cloudinary.com/hringleikur/image/upload/v1549856656/hringleikur/aratugur.jpg
+description_is: ''
+description_en: Classic circus show celebating a decade of Icelandic circus.
+body_is: ''
+body_en: >-
+  2018 marked a decade of circus arts in Iceland. To celebrate, we put together
+  a classical circus show and toured the two biggest cities in Iceland to
+  sold-out audiences.
+layout: project
+type: project
