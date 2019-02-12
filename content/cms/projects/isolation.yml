@@ -1,12 +1,15 @@
-title_en: "Isolation Nation"
-title_is: "Isolation Nation"
-type: project
-layout : project
+date: '2019-02-12 12:12pm'
 featured: true
-Date: '2019-01-24 12:00am'
-image: "https://res.cloudinary.com/hringleikur/image/upload/v1549856656/hringleikur/isolation.jpg"
-description_is: ""
-description_en: "Something about it"
-body_is: ""
-body_en: "Something about it"
-color : "#5a6b7b"
+title_is: Isolation Nation
+title_en: Isolation Nation
+color: '#5a6b7b'
+image: >-
+  https://res.cloudinary.com/hringleikur/image/upload/v1549856656/hringleikur/isolation.jpg
+description_is: ''
+description_en: Isolation Nation is a new circus project
+body_is: ''
+body_en: >-
+  Isolation Nation is a new circus project, exploring the concept of isolation
+  and independance in an Icelandic context.
+layout: project
+type: project
