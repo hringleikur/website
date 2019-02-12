@@ -228,7 +228,7 @@ collections:
     delete: true
     extension: "yml"
     format: "yml"
-    identifier_field : "title_is"
+    identifier_field : "title_en"
     fields:
       - label: "Date"
         name: "date"
@@ -247,12 +247,12 @@ collections:
         name: title_is
         t_root: "title"
         widget: string
-        required: true
+        required: false
       - label: "Title (English)"
         name: title_en
         t_root: "title"
         widget: string
-        required: false
+        required: true
       - label: "Primary Image"
         name: "image"
         widget: "image"
