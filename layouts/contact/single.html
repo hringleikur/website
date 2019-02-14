@@ -28,7 +28,8 @@
       {{ if .Params.show_form }}
           <div class="contact-form">
 
-                      <form name="contact" method="POST" data-netlify="true">
+                      {{ with .Site.GetPage "/" }}<form name="contact" method="POST" data-netlify="true" action="{{ .Permalink }}">{{ end }}
+                      <div data-netlify-recaptcha="true"></div>
                       <fieldset>
                         <legend>{{ i18n "sendMessage" | humanize }}</legend>
 
