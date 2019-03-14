@@ -39,6 +39,14 @@ collections:
             name: address
             widget: text
             required: false
+          - label: Kennitala
+            name: kennitala
+            widget: string
+            required: false
+          - label: Bank Account Number
+            name: bank
+            widget: string
+            required: false
       - label: Social Media
         name: social
         file: "data/social.yml"
