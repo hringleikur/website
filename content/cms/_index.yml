@@ -1,6 +1,9 @@
-body_is: >-
+title_en: Home
+title_is: Heim
+default_image: https://hringleikur.is/tile-wide.png
+default_description_is: >-
   Hringleikur is a new Icelandic circus company that aims to promote Icelandic circus culture. Our members are circus artists and those who work in the field of circus in Iceland.
-body_en: >-
+default_description_en: >-
   Hringleikur is a new Icelandic circus company that aims to promote Icelandic circus culture. Our members are circus artists and those who work in the field of circus in Iceland.
 layout: home
 date: '2019-01-24 12:00am'

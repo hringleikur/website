@@ -6,7 +6,17 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  {{ block "meta" . }}{{end}}
+
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  {{ block "meta" . }}
+  {{ $home := .Site.GetPage "/" }}
+    <meta property="og:title" content="{{ .Site.Title }} - {{ .Title }}">
+    <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ $home.Params.default_description }}{{ end }}">
+    <meta property="og:image" content="{{ if .Params.image }}{{ .Params.image }}{{ else }}{{ $home.Params.default_image }}{{ end }}">
+    <meta name="twitter:image:alt" content="{{ if .Params.caption }}{{ .Params.caption }}{{ else }}Hringleikur{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta name="twitter:card" content="summary_large_image">
+  {{end}}
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -26,6 +36,8 @@
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="icon" href="/favicon.ico">
 
+
+
   <!-- CSS -->
   {{- $inServerMode := .Site.IsServer }}
   {{- $cssTarget := "css/style.css" }}
@@ -40,7 +52,7 @@
 </head>
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
-  
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P929B3N"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

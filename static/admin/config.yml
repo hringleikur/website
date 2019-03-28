@@ -79,21 +79,33 @@ collections:
             langIfEmpty: "is"
             file: "is/"
         fields:
-          - label: "Show projects"
-            name: "show_projects"
-            widget: "boolean"
-            required: true
-            default: true
-          - label: "Body (Icelandic)"
-            name: "body_is"
-            t_root: "body"
-            widget: "markdown"
-            required: true
-          - label: "Body (English)"
-            name: "body_en"
-            t_root: "body"
-            widget: "markdown"
+          - label: "Title (Icelandic)"
+            name: title_is
+            t_root: "title"
+            widget: string
             required: false
+          - label: "Title (English)"
+            name: title_en
+            t_root: "title"
+            widget: string
+            required: true
+          - label: "Default Social Sharing Image"
+            hint: "This image will be used when the site is shared on social media, unless a project or news article is being shared that defines its own primary image."
+            name: "default_image"
+            widget: "image"
+            required: false
+          - label: "Default Description (Icelandic)"
+            hint: This description will be used when the site is shared on social media, unless the page being shared has its own short description.
+            name: "default_description_is"
+            t_root: "default_description"
+            widget: "text"
+            required: false
+          - label: "Default Description (English)"
+            hint: This description will be used when the site is shared on social media, unless the page being shared has its own short description.
+            name: "default_description_en"
+            t_root: "default_description"
+            widget: "text"
+            required: true
           - name: layout
             widget: hidden
           - name: date
