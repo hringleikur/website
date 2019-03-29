@@ -111,6 +111,7 @@
       if (e.target.className == "language-link")
       {
           Cookies.set('nf_lang', e.target.dataset.lang);
+          Cookies.set('nf_country', e.target.dataset.lang == 'is' ? 'is' : 'us');
       }
     });
   });
