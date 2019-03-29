@@ -36,8 +36,6 @@
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="icon" href="/favicon.ico">
 
-
-
   <!-- CSS -->
   {{- $inServerMode := .Site.IsServer }}
   {{- $cssTarget := "css/style.css" }}
@@ -95,15 +93,28 @@
   {{ partial "footer.html" . }}
   {{ partial "sub-footer.html" . }}
 
+  {{ $cookies := resources.Get "js/libs/js.cookie.js" }}
   {{ $scripts := resources.Get "js/scripts.js" }}
   {{ if .Site.IsServer }}
   <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
+  <script type="text/javascript" src="{{ $cookies.RelPermalink }}"></script>
   {{ else }}
   <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
+  <script type="text/javascript" src="{{ ($cookies | minify | fingerprint).RelPermalink }}"></script>
   {{ end }}
 
   {{ block "footer_js" . }}{{ end }}
-
+<script type="text/javascript">
+  ready(function(){
+    document.addEventListener("click", function (e)
+    {
+      if (e.target.className == "language-link")
+      {
+          Cookies.set('nf_lang', e.target.dataset.lang);
+      }
+    });
+  });
+</script>
   {{ partial "google-analytics.html" . }}
 
 </body>

@@ -26,7 +26,7 @@
     {{ end }}
     {{ if .IsTranslated }}
         {{ range .Translations }}
-            <li class="menu-item-lang"><a href="{{ .Permalink }}">{{ .Language.LanguageName | humanize }}</a></li>
+            <li class="menu-item-lang"><a class="language-link" data-lang="{{ .Language }}" href="{{ .Permalink }}">{{ .Language.LanguageName | humanize }}</a></li>
         {{ end}}
     {{ end }}
 </ul>
