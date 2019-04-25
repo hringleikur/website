@@ -100,10 +100,9 @@ collections:
             widget: "markdown"
             required: false
           - label: "Default Social Sharing Image"
-            hint: "This image will be used when the site is shared on social media, unless a project or news article is being shared that defines its own primary image."
+            hint: "This image will be used when the site is shared on social media, unless a project or news article is being shared that defines its own primary image. Username: tom@hringleikur.is / Password: DJPB4994"
             name: "default_image"
             widget: "image"
-            hint : "Username: tom@hringleikur.is / Password: DJPB4994",
             required: false
           - label: "Default Description (Icelandic)"
             hint: This description will be used when the site is shared on social media, unless the page being shared has its own short description.
@@ -145,7 +144,7 @@ collections:
           - label: "Banner Image"
             name: "image"
             widget: "image"
-            hint : "Username: tom@hringleikur.is / Password: DJPB4994",
+            hint : "Username: tom@hringleikur.is / Password: DJPB4994"
             required: false
           - label: "Body (Icelandic)"
             name: "body_is"
@@ -185,7 +184,7 @@ collections:
           - label: "Banner Image"
             name: "image"
             widget: "image"
-            hint : "Username: tom@hringleikur.is / Password: DJPB4994",
+            hint : "Username: tom@hringleikur.is / Password: DJPB4994"
             required: false
           - label: "Body (Icelandic)"
             name: "body_is"
@@ -225,7 +224,7 @@ collections:
           - label: "Banner Image"
             name: "image"
             widget: "image"
-            hint : "Username: tom@hringleikur.is / Password: DJPB4994",
+            hint : "Username: tom@hringleikur.is / Password: DJPB4994"
             required: false
           - label: "Show Form"
             name: "show_form"
@@ -290,7 +289,7 @@ collections:
       - label: "Primary Image"
         name: "image"
         widget: "image"
-        hint : "Username: tom@hringleikur.is / Password: DJPB4994",
+        hint : "Username: tom@hringleikur.is / Password: DJPB4994"
         required: false
       - label: "Caption (Icelandic)"
         name: caption_is
@@ -360,7 +359,7 @@ collections:
       - label: "Primary Image"
         name: "image"
         widget: "image"
-        hint : "Username: tom@hringleikur.is / Password: DJPB4994",
+        hint : "Username: tom@hringleikur.is / Password: DJPB4994"
         required: false
       - label: "Short Description (Icelandic)"
         name: "description_is"
