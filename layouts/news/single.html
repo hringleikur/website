@@ -14,14 +14,8 @@
       {{ if .Params.image }}
       {{ $base := "https://res.cloudinary.com/hringleikur/image/upload/" }}
       <img class="img-fluid pb-2" src="{{ $base }}t_standard/{{ strings.TrimPrefix $base .Params.image }}">{{ end }}
-      {{.Content}}
-    </div>
-    <div class='col-md-4'>
-      {{ if gt .WordCount 200 }}
-      <h2>{{ i18n "contents" | humanize }}</h2>
-      {{.TableOfContents}}
-      {{ end }}</div>
-  </div></div>
+      <p><b>{{ .Date.Format "Jan 2, 2006" }}</b></p> {{.Content}}
+    </div></div></div>
   </div>
 </div>
 {{ end }}

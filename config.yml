@@ -23,9 +23,8 @@ languages:
       - name: "Hafa samband"
         url: "/is/hafa-samband/"
         weight: 3
-      - name: "Taka þátt"
+      - name: "Gerast meðlimur"
         url: "/is/join"
-        identifier: "logout-link"
         weight: 5
   en:
     title: "Hringleikur"

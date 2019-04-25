@@ -3,6 +3,6 @@
     <h3>
       {{ .Title }}
     </h3>
-    <p><b>{{ .Date.Format "Jan 2, 2006" }}</b> - {{ .Plain | truncate 150 "..." }}</p>
+    <p><b>{{ .Date.Format "Jan 2, 2006" }}</b> - {{ .Plain | safeHTML | truncate 150 "..." }}</p>
   </a>
 </div>

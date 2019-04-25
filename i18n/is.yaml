@@ -1,6 +1,6 @@
 # Contact
 sendMessage:
-  other: senda skilaboð
+  other: senda okkur skilaboð
 yourName:
   other: nafn
 yourEmail:
@@ -20,6 +20,8 @@ news:
 being:
   other: um okkur
 doing:
-  other: verkefni
+  other: starfsemi
 happening:
   other: fréttir
+contents:
+  other: efnisyfirlit
