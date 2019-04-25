@@ -12,7 +12,7 @@
       {{ $articles := where (where .Site.RegularPages "Type" "news") ".Params.featured" true }}
       {{if gt (len $articles) 0}}
       <h2>{{ i18n "happening" | humanize }}</h2>
-        {{ range last 5 (sort $articles ".Params.date") }}
+        {{ range last 5 (sort $articles ".Date" "desc") }}
         {{ .Render "summary" }}
         {{ end }}
       {{end}}
@@ -23,7 +23,7 @@
     {{if gt (len $projects) 0}}
     <div class="col-12 col-md-6">
       <h2>{{ i18n "doing" | humanize }}</h2>
-        {{ range last 5 (sort $projects ".Params.date" "desc") }}
+        {{ range last 5 (sort $projects ".Date" "desc") }}
         {{ .Render "summary" }}
         {{ end }}
     </div>
