@@ -5,8 +5,10 @@ title_en: A Decade of Circus
 color: '#243f5a'
 image: >-
   https://res.cloudinary.com/hringleikur/image/upload/v1549856656/hringleikur/aratugur.jpg
-description_is: ''
-description_en: Classic circus show celebating a decade of Icelandic circus.
+description_is: 10 ára afmælissýning sirkus á Íslandi snýr aftur í sumar!
+description_en: >-
+  Classic circus show celebating a decade of Icelandic circus returns this
+  summer!
 body_is: >-
   Árið 2018 markaði tíu ár af íslenskri sirkusstarfsemi, og í tilefni þess setti
   Hringleikur saman sýninguna Áratugur af sirkus í samstarfi við Sirkus Íslands.
@@ -14,8 +16,7 @@ body_is: >-
   snýr hún aftur sumarið 2019! 
 
 
-  Miðasala fyrir sýningarnar er hafin
-  [hér](https://tix.is/is/event/7885/aratugur-af-sirkus/).
+  Miðasala fyrir sýningarnar er hafin hér.
 body_en: >-
   2018 marked a decade of Icelandic circus arts. To celebrate, we put together a
   classical circus show and toured the two biggest cities in Iceland to sold-out
@@ -23,7 +24,6 @@ body_en: >-
   return due to popular demand this summer.
 
 
-  Ticket sales are already open
-  [here](https://tix.is/is/event/7885/aratugur-af-sirkus/).
+  Ticket sales are already open here.
 layout: project
 type: project
