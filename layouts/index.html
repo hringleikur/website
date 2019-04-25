@@ -23,7 +23,7 @@
     {{if gt (len $projects) 0}}
     <div class="col-12 col-md-6">
       <h2>{{ i18n "doing" | humanize }}</h2>
-        {{ range last 5 (sort $projects ".Params.date") }}
+        {{ range last 5 (sort $projects ".Params.date" "desc") }}
         {{ .Render "summary" }}
         {{ end }}
     </div>
