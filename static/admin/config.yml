@@ -266,7 +266,7 @@ collections:
       - label: "Date"
         name: "date"
         widget: "datetime"
-        format: "YYYY-MM-DD hh:mma"
+        format: "YYYY-MM-DD"
         required: true
       - label: "Featured"
         name: "featured"
@@ -336,7 +336,7 @@ collections:
       - label: "Date"
         name: "date"
         widget: "datetime"
-        format: "YYYY-MM-DD hh:mma"
+        format: "YYYY-MM-DD"
         required: true
       - label: "Featured"
         name: "featured"
