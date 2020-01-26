@@ -1,8 +1,14 @@
 date: '2019-01-30'
-featured: true
-title_en: General Assembly
+featured: false
+color: '#142a5a'
 title_is: Aðalfundur
-body_en: At our annual general meeting this year we went over the projects and programs we started last year, as well as proposals for new directions in 2019. It has been a busy first year for Hringleikur. We had a successful tour of our classical show, continued the regular classes in the youth circus as well as added an additional weeknight training for the older students, and made significant progress on new projects.
+title_en: General Assembly
+body_en: >-
+  At our annual general meeting this year we went over the projects and programs
+  we started last year, as well as proposals for new directions in 2019. It has
+  been a busy first year for Hringleikur. We had a successful tour of our
+  classical show, continued the regular classes in the youth circus as well as
+  added an additional weeknight training for the older students, and made
+  significant progress on new projects.
 layout: news
 type: news
-color: "#142a5a"
